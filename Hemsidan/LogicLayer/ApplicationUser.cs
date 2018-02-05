@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNet.Identity;
+﻿using LogicLayer.Models;
+using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,8 @@ namespace LogicLayer
 {
    public class ApplicationUser : IdentityUser
     {
+        public string FamilyName { get; set; }
+        public virtual ICollection<Member> Members { get; set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
