@@ -12,8 +12,7 @@ namespace LogicLayer
 {
    public class ApplicationUser : IdentityUser
     {
-        public string FamilyName { get; set; }
-        public virtual ICollection<Member> Members { get; set; }
+        public int Points { get; set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {

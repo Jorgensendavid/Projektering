@@ -21,8 +21,9 @@ namespace LogicLayer
             return new ApplicationDbContext();
         }
 
-        public DbSet<Chore> Chors { get; set; }
-        public DbSet<Member> Members { get; set; }
+        public DbSet<Chore> Chores { get; set; }
+        public DbSet<Family> Families { get; set; }
 
+        public System.Data.Entity.DbSet<LogicLayer.Models.Family> Families { get; set; }
     }
 }
