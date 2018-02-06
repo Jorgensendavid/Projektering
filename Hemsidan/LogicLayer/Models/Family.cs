@@ -8,10 +8,10 @@ namespace LogicLayer.Models
 {
     public class Family
     {
-        public int Id { get; set; }
+        public string Id { get; set; }
         public string Name { get; set; }
 
-        public virtual ApplicationUser asd { get; set; }
+        public virtual ICollection<ApplicationUser> Members { get; set; }
    
         public virtual ICollection<Chore> chore { get; set; }
     }

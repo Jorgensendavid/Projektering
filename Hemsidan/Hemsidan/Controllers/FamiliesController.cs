@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using LogicLayer;
 using LogicLayer.Models;
+using Microsoft.AspNet.Identity;
 
 namespace Hemsidan.Controllers
 {
@@ -52,6 +53,9 @@ namespace Hemsidan.Controllers
         {
             if (ModelState.IsValid)
             {
+                var user = User.Identity.Name;
+                var member = db.Users.Single(x => x.UserName == user);
+                family.Members.Add(member);
                 db.family.Add(family);
                 db.SaveChanges();
                 return RedirectToAction("Index");
