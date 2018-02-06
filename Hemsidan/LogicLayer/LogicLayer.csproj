@@ -79,6 +79,7 @@
     <Compile Include="CustomUserStore.cs" />
     <Compile Include="IdentityConfig.cs" />
     <Compile Include="Models\Chore.cs" />
+    <Compile Include="Models\Family.cs" />
     <Compile Include="Models\Member.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserInitializer.cs" />
