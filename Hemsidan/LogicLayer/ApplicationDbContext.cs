@@ -22,7 +22,7 @@ namespace LogicLayer
         }
 
         public DbSet<Chore> Chors { get; set; }
-        public DbSet<Member> Members { get; set; }
+        public DbSet<Family> family { get; set; }
 
     }
 }
